@@ -8,6 +8,7 @@ export default class TodoInput extends Component {
   //     payload: newTodo
   //   });
   // }
+ 
   onAdded = () => {
     const {input} = this.refs
     this.props.addNewTodo(input.value)

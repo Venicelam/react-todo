@@ -1,5 +1,6 @@
 const initialState ={
-    todos: []
+    todos: [],
+    isOnlyActive: false
 };
 export default (state = initialState, {type, payload}) => {
     switch (type){
@@ -15,6 +16,8 @@ export default (state = initialState, {type, payload}) => {
             })
             return {todos: result}
           }
+          case "SET_FILTER":
+          return{...state, isOnlyActive: payload}
     default:
         return state;
     }
